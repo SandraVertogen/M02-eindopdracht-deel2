@@ -1,0 +1,173 @@
+body {
+    background-color: #c3cfe2;
+
+}
+
+/* onderstaande code is voor de zwarte achtergrond van de foto (zichtbaar :hover) */
+article {
+    background-color: black;
+    border-radius: 10px;
+}
+
+/* onderstaande code is de opmaak van de foto */
+img {
+    height: 400px;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #777777;
+    -moz-box-shadow: 0px 0px 10px #777777;
+    -webkit-box-shadow: 0px 0px 10px #777777;  
+    margin-top: -20px; 
+}
+
+/* onderstaande code positioneert de foto en de button, zodat de button achter de foto komt */
+.image { position: relative;
+    top: 0px;
+    left: 0px;
+}
+
+.button {
+    position: relative;
+    left: 100px;
+    top: 150px;   
+}
+
+/* onderstaande code is wat er gebeurt als je met de muis over de foto beweegt */
+img:hover {
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 1500ms;
+    transition-timing-function: ease;
+}
+
+
+
+
+/* met onderstaande code is de grid voor de mobiele weergave (mobile first) */
+.portfolio {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 300px 1fr;
+    grid-template-rows: repeat(12, 400px);
+    grid-template-areas:
+     ". p1 ."
+     ". p2 ."
+     ". p3 ."
+     ". p4 ."
+     ". p5 ."
+     ". p6 ."
+     ". p7 ."
+     ". . .";
+}
+.portfolio1 {
+    grid-area: p1;      
+}
+.portfolio2 {
+    grid-area: p2;      
+}
+.portfolio3 {
+    grid-area: p3;      
+}
+.portfolio4 {
+    grid-area: p4;      
+}
+.portfolio5 {
+    grid-area: p5;      
+}
+
+.portfolio6 {
+    grid-area: p6;      
+}
+.portfolio7 {
+    grid-area: p7;      
+}
+
+
+
+
+
+
+/* met onderstaande code is de grid voor de tablet weergave */
+
+@media screen and (min-width: 768px) {
+    body, html {
+        height: 100%;
+    }
+
+.portfolio {
+    height: 100%;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 300px 300px 1fr;
+    grid-template-rows: repeat(12, 400px);
+    grid-template-areas:
+     ". p1 p2 ."
+     ". p3 p4 ."
+     ". p5 p6 ."
+     ". p7 . .";
+}
+.portfolio1 {
+    grid-area: p1;      
+}
+.portfolio2 {
+    grid-area: p2;      
+}
+.portfolio3 {
+    grid-area: p3;      
+}
+.portfolio4 {
+    grid-area: p4;      
+}
+.portfolio5 {
+    grid-area: p5;      
+}
+.portfolio6 {
+    grid-area: p6;      
+}
+.portfolio7 {
+    grid-area: p7;      
+}
+}
+
+
+
+/* met onderstaande code is de grid voor de desktop weergave */
+
+@media screen and (min-width: 1024px) {
+    body, html {
+        height: 100%;
+    }
+
+.portfolio {
+    height: 100%;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 300px 300px 300px 1fr;
+    grid-template-rows: repeat(12, 400px);
+    grid-template-areas:
+     ". p1 p2 p3 ."
+     ". p4 p5 p6 ."
+     ". p7 .  .  .";
+}
+.portfolio1 {
+    grid-area: p1;      
+}
+.portfolio2 {
+    grid-area: p2;      
+}
+.portfolio3 {
+    grid-area: p3;      
+}
+.portfolio4 {
+    grid-area: p4;      
+}
+.portfolio5 {
+    grid-area: p5;      
+}
+.portfolio6 {
+    grid-area: p6;      
+}
+.portfolio7 {
+    grid-area: p7;      
+}
+}
